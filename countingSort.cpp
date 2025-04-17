@@ -7,7 +7,7 @@ void countingsort(int arr[],int size){
         if(arr[i]>max)
         max=arr[i];
     }
-    vector<int>count(max+1,0);
+    vector<int>count(max+1,0); //initialize all elements of array to 0 , (max+1) to account for 0-based indexing
     for(int i= 0;i<size;i++){ //count the occurences of each element
         count[arr[i]]++;
     }
