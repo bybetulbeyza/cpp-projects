@@ -2,20 +2,22 @@
 #include <vector>
 using namespace std;
 
-void prefixaverage(int* arr,int size){
-    vector<int>array;
+vector<int> prefixaverage(int* arr,int size){
+    vector<int> array(size);
     int s=0;
     for(int i =0;i<size;i++){
         s=arr[i]+s;
         array.push_back(s/(i+1));
     }
-    for(int i=0;i<size;i++)
-    cout<<array[i]<<" ";
+    return array;
 }
 
 int main(){
     int arr[]={1,2,3,4,5,6,7,8};
     int size =sizeof(arr)/sizeof(int);
-    prefixaverage(arr,size);
+    vector<int>result=prefixaverage(arr,size);
+    for(int x : result){
+        cout<<" ";
+    }
     return 0;
 }
